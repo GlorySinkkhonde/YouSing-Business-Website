@@ -19,6 +19,7 @@ img{
     background-color: rgba(31, 30, 30, 0.967);
     position: absolute;
     width: 100%;
+    z-index: 1;
 }
 
 .navigation__primary{
@@ -54,13 +55,16 @@ img{
     cursor: pointer;
     padding-top: 3rem;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .navigation__nav-items > a:hover{
     color: var(--green-color);
 }
 
-
+.navigation__nav-items > .active  {
+    text-decoration: underline;
+}
 
 .hamburger{
     width: 60%;
@@ -100,15 +104,77 @@ img{
     transform: translateY(3px);
 }
 
-.navigation__nav-items > a {
-    text-decoration: none;
+
+.classes{
+    position: relative;
+    padding-top: 10rem;
+    z-index: 0;
 }
+
+.classes > h2 {
+    font-size: 28px;
+    text-align: center;
+    color: var(--grayish-color);
+    margin-bottom: 4rem;
+}
+
+.classes__list{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.class-1 {
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 8px 5px 35px -16px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 8px 5px 35px -16px rgba(0,0,0,0.61);
+    -moz-box-shadow: 8px 5px 35px -16px rgba(0,0,0,0.61);
+}
+
+.class-1 > img {
+    border-radius: 10px;
+}
+
+.class-1 > h3 {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.class-1 > p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.class-1 > button {
+    padding: 1rem 0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: var(--green-color);
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+hr{
+    width: 80%;
+    margin: 5rem auto;
+}
+
 
 
 @media only screen and (min-width:770px) {
 
     .navigation{
         justify-content: space-between;
+        background-color: unset;
     }
 
     .navigation__toggle{
@@ -131,16 +197,13 @@ img{
     .navigation__nav-items{
         flex-direction: row;
         height: 0;
+        gap: 3rem;
     }
 
     .navigation__nav-items > a{
         color: var(--grayish-color);
-        font-size: 21px;
-    }
-
-    .navigation__nav-items{
-        gap: 3rem;
-    }
+        font-size: 20px;
+    }  
 
 }
 

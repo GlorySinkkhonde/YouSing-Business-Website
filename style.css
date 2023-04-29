@@ -60,7 +60,13 @@ img{
     color: var(--green-color);
 }
 
+.navigation__nav-items > a {
+    text-decoration: none;
+}
 
+.navigation__nav-items > .active  {
+    text-decoration: underline;
+}
 
 .hamburger{
     width: 60%;
@@ -101,8 +107,6 @@ img{
 }
 
 
-
-
 .hero__content-section {
     padding-top: 2rem;
 }
@@ -132,10 +136,6 @@ img{
     border-radius: 4px;
  }
 
-.navigation__nav-items > a {
-    text-decoration: none;
-}
-
 .hero{
     display: flex;
     flex-direction: column-reverse;
@@ -156,6 +156,7 @@ img{
 
     .navigation{
         justify-content: space-between;
+        background-color: unset;
     }
 
     .navigation__toggle{
@@ -178,15 +179,12 @@ img{
     .navigation__nav-items{
         flex-direction: row;
         height: 0;
+        gap: 3rem;
     }
 
     .navigation__nav-items > a{
         color: var(--grayish-color);
-        font-size: 21px;
-    }
-
-    .navigation__nav-items{
-        gap: 3rem;
+        font-size: 20px;
     }
 
 }
