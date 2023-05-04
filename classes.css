@@ -11,6 +11,7 @@
 
 body{
     font-family: 'Josefin Sans', sans-serif;
+    /*overflow-x: hidden;*/
 }
 
 img{
@@ -174,8 +175,30 @@ hr{
 
 .testimonial__slider{
     display: flex;
-    width: 3000%;
-    gap: 1rem;
+    flex-direction: column;
+}
+
+.testimonial__slider-container-1, .testimonial__slider-container-2{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.testimonial__slider-container-2{
+    margin-top: -17rem;
+    transform: translateX(110%);
+}
+
+.disappear{
+    transform: translateX(-110%);
+    transition-duration: 1s;
+}
+
+.appear{
+    transform: translateX(0%);
+    transition-duration: 1s;
 }
 
 .testimonials > h2{
@@ -184,11 +207,9 @@ hr{
 }
 
 .testimonial1{
-    width: 100%;
     margin-left: 2rem;
     margin-bottom: 2rem;
     padding: 2rem 1.5rem;
-    width: 25rem;
     background-color: var(--green-color);
     border-radius: 10px;
     box-shadow: 8px 5px 35px -16px rgba(0,0,0,0.61);
@@ -225,6 +246,21 @@ hr{
     font-size: 18px;
     font-weight: 500;
     color: white;
+}
+
+.slide-back{
+    margin-left: 2rem;
+}
+
+.slide-back, .slide-forward{
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+.slide-back:hover, .slide-forward:hover{
+    font-size: 50px;
+    color: var(--green-color);
 }
 
 
