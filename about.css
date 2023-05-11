@@ -6,11 +6,12 @@
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
-    color: var(--grayish-color);
+
 }
 
 body{
     font-family: 'Josefin Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 img{
@@ -22,6 +23,8 @@ img{
     background-color: rgba(31, 30, 30, 0.967);
     position: absolute;
     width: 100%;
+    z-index: 1;
+    margin-bottom: 20rem;
 }
 
 .navigation__primary{
@@ -57,14 +60,11 @@ img{
     cursor: pointer;
     padding-top: 3rem;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .navigation__nav-items > a:hover{
     color: var(--green-color);
-}
-
-.navigation__nav-items > a {
-    text-decoration: none;
 }
 
 .navigation__nav-items > .active  {
@@ -110,54 +110,121 @@ img{
 }
 
 
-.hero__content-section {
-    padding-top: 2rem;
-}
 
-.hero__content-section > h1{
-    font-size: clamp(3rem, 5vw, 6rem);
-}
 
-.hero__content-section > h3{
-    font-size: clamp(1rem, 2vw, 2rem);
-    font-weight: 300;
-    font-style: italic;
-    margin: .5em 0;
-}
 
-.hero__content-section > p{
-   font-weight: 400;
-   margin: 1em 0;
-}
 
-.hero__content-section > button{
-    padding: 1rem 2rem;
-    font-size: 21px;
-    background-color: var(--green-color);
+
+
+
+
+footer{
+    background-color: #0E2B26;
+    padding: 2rem;
     color: white;
-    border: none;
-    border-radius: 4px;
+}
+
+.footer__socials{
+    margin-bottom: 2rem;
+}
+
+.footer__socials > span > i {
+    font-size: 21px;
+    padding-right: .2rem;
+    margin-top: .5rem;
     cursor: pointer;
- }
+}
 
- .hero__content-section > button:hover{
+.footer__socials > span > i:hover {
+    color: var(--green-color);
+}
+
+.footer__primary-nav{
+   margin-bottom: 2rem;
+}
+
+.footer__legal-nav{
+    margin-bottom: 2rem;
+}
+
+ul{
+    margin-top: .5rem
+}
+
+ul > li{
+    list-style: none;
+    padding: .5rem 0;
+    margin-left: -2.4rem;
+}
+
+ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer__form{
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--grayish-color);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.footer__form > h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 21px;
+}
+
+.footer__form > p{
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer__form > input{
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    color: var(--grayish-color);
+    margin-top: .5rem;
+}
+
+.footer__form > label{
+    font-size: 14px;
+}
+
+.footer__form > button {
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--green-color);
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+.footer__form > button:hover{
     background-color: #298979;
- }
-
-.hero{
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 5rem;
 }
 
-.hero__content-section{
-    margin: -3rem 3em;
+footer > p {
+    text-align: center;
+    font-size: 14px;
 }
 
-.hero > img{
-    margin-top: 2rem;
-}
+@media only screen and (max-width: 560px) {
 
+
+}
 
 
 @media only screen and (min-width:770px) {
@@ -193,7 +260,13 @@ img{
     .navigation__nav-items > a{
         color: var(--grayish-color);
         font-size: 20px;
+    } 
+
+    .footer__nav{
+        display: flex;
+        justify-content: space-between;
     }
+    
 
 }
 
@@ -201,6 +274,19 @@ img{
 
     .navigation__nav-items{
         gap: 4rem;
+    }
+
+    .footer__container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer__info{
+        width: 45%;
+    }
+
+    .footer__form{
+        width: 50%;
     }
 
 }
@@ -211,39 +297,32 @@ img{
         gap: 7rem;
     }
 
-    .hero{
-        margin: 0 3rem;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-top: 11rem;
+    .footer__container{
+        margin-left: 6rem;
     }
 
-    .hero__image{
-        width: 50%;
+    .footer__info{
+        width: 40%;
     }
 
-    .hero__content-section{
-        width: 50%;
-        padding-top: 7rem;
+    .footer__form{
+        width: 40%;
     }
 
-    .hero__content-section > h1{
-        font-size: 87px;
+}
+
+@media only screen and (min-width: 1500px) {
+
+    .navigation__nav-items {
+        gap: 7rem;
     }
 
-    .hero__content-section > h3{
-        font-size: 25px;
-        margin-bottom: 2rem;
+    .footer__container{
+        margin-left: 15rem;
     }
 
-    .hero__content-section > p{
-        width: 90%;
-        font-size: 21px;
-        margin-bottom: 2rem;
-    }
-
-    .hero__content-section > button{
-        font-size: 25px;
+    .footer__info{
+        width: 30%;
     }
 
 }
