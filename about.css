@@ -117,7 +117,7 @@ img{
 }
 
 .about-one > h2, .about-two > h2 {
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 4rem;
     font-weight: 500;
@@ -172,9 +172,13 @@ hr{
 }
 
 .member__intro-card > h3{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     margin-bottom: 1.5rem;
+}
+
+.member__intro-card > p{
+    font-size: 14px;
 }
 
 .team__member-five{
@@ -193,12 +197,18 @@ hr{
     padding: 1rem 15%;
     border: none;
     background-color: var(--green-color);
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 5px;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     transition-duration: .3s;
     transition-delay: .1s;
+}
+
+.about__contact-btn > button > a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
 }
 
 .about__contact-btn > button:hover{
@@ -216,6 +226,11 @@ footer{
 
 .footer__socials{
     margin-bottom: 2rem;
+}
+
+.footer__primary-nav > h2, .footer__legal > h2, .footer__socials > h2{
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .footer__socials > span > i {
@@ -291,7 +306,7 @@ ul > li > a{
 
 .footer__form > button {
     width: 100%;
-    padding: .5rem;
+    padding: 1rem;
     border: none;
     border-radius: 2px;
     background-color: var(--green-color);
@@ -372,6 +387,55 @@ footer > p {
         justify-content: space-between;
     }
 
+    .about-one > h2, .about-two > h2{
+        font-size: 32px;
+    }
+    
+    .member__intro-card > h2{
+        font-size: 21px;
+    }
+
+    .about__intro > p, .member__intro-card > p{
+        font-size: 17px;
+    }
+
+    .member__intro-card > h3 {
+        font-size: 18px;
+    }
+
+    .about__contact-btn > button > a{
+        font-size: 21px;
+    }
+
+    .footer__primary-nav > h2, .footer__legal > h2, .footer__socials > h2{
+        font-size: 28px;
+    }
+
+    ul > li > a{
+        font-size: 18px;
+    }
+
+    .footer__form > h2{
+        font-size: 28px;
+    }
+
+    .footer__form > p{
+        font-size: 17px;
+    }
+
+    .footer__form > label{
+        font-size: 21px;
+    }
+
+    .footer__form > button{
+        font-size: 18px;
+    }
+
+    footer > p {
+        font-size: 18px;
+        margin-top: 2rem;
+    }
+
 }
 
 @media only screen and (min-width: 850px) {
@@ -437,13 +501,8 @@ footer > p {
         width: 50%;
     }
 
-    .about__contact-btn > button{
-        font-size: 18px;
-    }
-
     .about__contact-btn{
         margin-bottom: 4rem;
-
         margin-right: 10rem;
     }
 

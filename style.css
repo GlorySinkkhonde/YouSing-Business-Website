@@ -134,14 +134,18 @@ img{
 
 .hero__content-section > button{
     padding: 1rem 2rem;
-    font-size: 21px;
     background-color: var(--green-color);
-    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition-duration: .3s;
     transition-delay: .1s;
+ }
+
+ .hero__content-section > button > a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
  }
 
  .hero__content-section > button:hover{
@@ -200,6 +204,10 @@ img{
         font-size: 20px;
     }
 
+    .hero__content-section > button > a{
+        font-size: 21px;
+     }
+
 }
 
 @media only screen and (min-width: 850px) {
@@ -245,10 +253,6 @@ img{
         width: 90%;
         font-size: 21px;
         margin-bottom: 2rem;
-    }
-
-    .hero__content-section > button{
-        font-size: 25px;
     }
 
 }
